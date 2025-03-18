@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông tin</title>
+  <link rel="stylesheet" href="css/thongtin.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="./public/logo1.png" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Tour</a></li>
+        <li><a href="#">Khách sạn</a></li>
+        <li><a href="#">Vé máy bay</a></li>
+        <li><a href="#">Combo</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#best-deal">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div class="user-actions">
+      <a href="#">Đăng nhập</a>
+      <a href="#">Đăng ký</a>
+    </div>
+  </header>
+
+  <!-- Slider -->
+  <section class="slider">
+    <div class="slides">
+      <img src="./public/h1.webp" alt="Slide 1">
+      <img src="./public/h2.webp" alt="Slide 2">
+      <img src="./public/h3.webp" alt="Slide 3">
+    </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </section>
+
+  <!-- Thanh tìm kiếm -->
+  <section class="search-bar">
+    <div class="search-container">
+        <h2>Bạn muốn đi đâu?</h2>
+        <form class="search-form">
+          <!-- Điểm đến -->
+          <div class="form-group">
+            <label for="destination">Điểm đến</label>
+            <input type="text" id="destination" placeholder="Nhập điểm đến">
+          </div>
+    
+          <!-- Ngày đi -->
+          <div class="form-group">
+            <label for="departure-date">Ngày đi</label>
+            <input type="date" id="departure-date">
+          </div>
+    
+          <!-- Ngày về -->
+          <div class="form-group">
+            <label for="return-date">Ngày về</label>
+            <input type="date" id="return-date">
+          </div>
+    
+          <!-- Số người lớn -->
+          <div class="form-group">
+            <label for="adults">Người lớn</label>
+            <select id="adults">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+    
+          <!-- Số trẻ em -->
+          <div class="form-group">
+            <label for="children">Trẻ em</label>
+            <select id="children">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+    
+          <!-- Số phòng -->
+          <div class="form-group">
+            <label for="rooms">Phòng</label>
+            <select id="rooms">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+    
+          <!-- Nút Tìm -->
+          <button type="submit" class="search-button">Tìm</button>
+        </form>
+      </div>
+  </section>
+
+  <!-- Danh mục nổi bật -->
+  <section class="favorite-destinations">
+    <h1>Điểm đến yêu thích trong nước</h1>
+    <p class="subtitle">Lên rừng xuống biển. Trọn vẹn Việt Nam</p>
+    <div class="destination-grid">
+      <div class="destination-item" style="background-image: url(./public/bien.jpg)">
+        <div class="destination-content">
+            <h2>Bãi Biển</h2>
+            <p class="hotel-count">806 khách sạn</p>
+        </div>
+      </div>
+
+      <div class="destination-item" style="background-image: url(./public/green.jpg);">
+        <h2>Tham Quan Thiên Nhiên</h2>
+        <p class="hotel-count">975 khách sạn</p>
+      </div>
+
+      <div class="destination-item" style="background-image: url(./public/vanhoa.jpg);">
+        <h2>Văn Hóa & Lịch Sử</h2>
+        <p class="hotel-count">105 khách sạn</p>
+      </div>
+
+      <div class="destination-item" style="background-image: url(./public/langchai.jpg);">
+        <h2>Cuộc Sống</h2>
+        <p class="hotel-count">767 khách sạn</p>
+      </div>
+
+      <div class="destination-item" style="background-image: url(./public/vuichoi.jpg);">
+        <h2>Vui Chơi & Giải Trí</h2>
+        <p class="hotel-count">927 khách sạn</p>
+      </div>
+
+      <div class="destination-item" style="background-image: url(./public/daonho.jpg);">
+        <h2>Các Đảo</h2>
+        <p class="hotel-count">362 khách sạn</p>
+      </div>
+
+      <div class="destination-item" style="background-image: url(./public/cho.jpeg);">
+        <h2>Khu Chợ & Ẩm Thực</h2>
+        <p class="hotel-count">15 khách sạn</p>
+      </div>
+
+      <div class="destination-item" style="background-image: url(./public/sea.jpg);">
+        <h2>Đặt Biệt</h2>
+        <p class="hotel-count">15 khách sạn</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ưu đãi đặc biệt -->
+  <section class="best-deals" id="best-deal">
+    <h2>Tour ưu đãi tốt nhất</h2>
+    <div class="tour-grid">
+      <!-- Tour 1 -->
+      <div class="tour-item">
+        <img src="images/tour1.jpg" alt="Tour Đà Nẵng">
+        <div class="tour-info">
+          <h3>Tour Đà Nẵng - Hội An</h3>
+          <p class="price">Giá từ <span>2.999.000đ</span></p>
+          <p class="discount">Ưu đãi: Giảm 10%</p>
+          <button>Xem chi tiết</button>
+        </div>
+      </div>
+
+      <!-- Tour 2 -->
+      <div class="tour-item">
+        <img src="images/tour2.jpg" alt="Tour Nha Trang">
+        <div class="tour-info">
+          <h3>Tour Nha Trang - Đà Lạt</h3>
+          <p class="price">Giá từ <span>3.499.000đ</span></p>
+          <p class="discount">Ưu đãi: Giảm 15%</p>
+          <button>Xem chi tiết</button>
+        </div>
+      </div>
+
+      <!-- Tour 3 -->
+      <div class="tour-item">
+        <img src="images/tour3.jpg" alt="Tour Phú Quốc">
+        <div class="tour-info">
+          <h3>Tour Phú Quốc</h3>
+          <p class="price">Giá từ <span>4.999.000đ</span></p>
+          <p class="discount">Ưu đãi: Giảm 20%</p>
+          <button>Xem chi tiết</button>
+        </div>
+      </div>
+
+      <!-- Tour 4 -->
+      <div class="tour-item">
+        <img src="images/tour4.jpg" alt="Tour Sapa">
+        <div class="tour-info">
+          <h3>Tour Sapa</h3>
+          <p class="price">Giá từ <span>3.799.000đ</span></p>
+          <p class="discount">Ưu đãi: Giảm 12%</p>
+          <button>Xem chi tiết</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 - Du lịch Website. All rights reserved.</p>
+  </footer>
+
+  <script src="js/thongtin.js"></script>
+</body>
+</html>
