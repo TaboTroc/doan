@@ -34,12 +34,19 @@
       <video autoplay muted loop id="video-background">
         <source src="../public/videos/videonen.mp4" type="video/mp4" />
       </video>
+      <div class="slider-content">
+        <h1>Khám phá Việt Nam</h1>
+        <p>Trải nghiệm những điểm đến tuyệt vời nhất</p>
+      </div>
     </section>
 
     <!-- Thanh tìm kiếm -->
     <section class="search-bar">
       <div class="search-container">
         <h2>Bạn muốn đi đâu?</h2>
+        <p class="search-description">
+          Tìm kiếm tour du lịch, khách sạn và vé máy bay với giá tốt nhất
+        </p>
         <form class="search-form">
           <!-- Điểm đến -->
           <div class="form-group">
@@ -92,6 +99,30 @@
             </select>
           </div>
 
+          <!-- Thêm tùy chọn loại tour -->
+          <div class="form-group">
+            <label for="tour-type">Loại tour</label>
+            <select id="tour-type">
+              <option value="">Chọn loại tour</option>
+              <option value="beach">Biển đảo</option>
+              <option value="mountain">Núi rừng</option>
+              <option value="culture">Văn hóa</option>
+              <option value="adventure">Phiêu lưu</option>
+            </select>
+          </div>
+
+          <!-- Thêm tùy chọn giá -->
+          <div class="form-group">
+            <label for="price-range">Khoảng giá</label>
+            <select id="price-range">
+              <option value="">Chọn khoảng giá</option>
+              <option value="0-2m">Dưới 2 triệu</option>
+              <option value="2m-5m">2-5 triệu</option>
+              <option value="5m-10m">5-10 triệu</option>
+              <option value="10m+">Trên 10 triệu</option>
+            </select>
+          </div>
+
           <!-- Nút Tìm -->
           <button type="submit" class="search-button">Tìm</button>
         </form>
@@ -102,6 +133,10 @@
     <section class="favorite-destinations">
       <h1>Điểm đến yêu thích trong nước</h1>
       <p class="subtitle">Lên rừng xuống biển. Trọn vẹn Việt Nam</p>
+      <p class="section-description">
+        Khám phá những địa điểm du lịch nổi tiếng nhất Việt Nam với các tour
+        được thiết kế đặc biệt
+      </p>
       <div class="destination-grid">
         <div
           class="destination-item"
@@ -174,6 +209,10 @@
     <!-- Destinations Grid Section -->
     <section class="destinations py-5">
       <div class="container-fluid">
+        <h2 class="section-title">Điểm đến nổi bật</h2>
+        <p class="section-description">
+          Những địa điểm được yêu thích nhất trong tháng
+        </p>
         <div class="destinations-grid">
           <!-- Card 1 -->
           <div class="destination-card">
@@ -218,9 +257,46 @@
       </div>
     </section>
 
+    <section class="living-spaces py-5">
+      <div class="container-fluid">
+        <h2 class="section-title">Nơi ở đặc biệt</h2>
+        <p class="section-description">
+          Trải nghiệm những nơi ở độc đáo và ấn tượng
+        </p>
+        <div class="living-spaces-grid">
+          <div class="living-space-card">
+            <img src="../public/images/h2.webp" alt="Nơi ở 1" />
+          </div>
+
+          <div class="living-space-card">
+            <img src="../public/images/h2.webp" alt="Nơi ở 2" />
+          </div>
+
+          <div class="living-space-card">
+            <img src="../public/images/h2.webp" alt="Nơi ở 3" />
+          </div>
+
+          <div class="living-space-card">
+            <img src="../public/images/h2.webp" alt="Nơi ở 4" />
+          </div>
+
+          <div class="living-space-card">
+            <img src="../public/images/h2.webp" alt="Nơi ở 5" />
+          </div>
+
+          <div class="living-space-card">
+            <img src="../public/images/h2.webp" alt="Nơi ở 6" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Ưu đãi đặc biệt -->
     <section class="best-deals" id="best-deal">
       <h2>Tour ưu đãi tốt nhất</h2>
+      <p class="section-description">
+        Những tour du lịch được ưu đãi đặc biệt trong tháng
+      </p>
       <div class="tour-grid">
         <!-- Tour 1 -->
         <div class="tour-item">
